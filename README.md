@@ -1,17 +1,12 @@
 # Nested-ember-gestures
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This repository is created in order to have a "bug"-reproduction of the [`ember-gestures`](https://github.com/html-next/ember-gestures/issues) 
+library.
 
-## Prerequisites
-
-You will need the following things properly installed on your computer.
-
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+It is shown that nested components which have registered themselves for the `tap` `recognizer`-event are triggered
+twice shortly after another. So, with this reproduction you will see that the `second-level` component fires the `tap`
+event which is then passed to the `first-level` component (this is correct), BUT shortly after that, the whole thing is
+triggered again....
 
 ## Installation
 
